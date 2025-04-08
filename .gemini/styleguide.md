@@ -1,4 +1,4 @@
-Company Betagro C# Style Guide
+Company CompanyX C# Style Guide
 
 Introduction
 This style guide outlines the coding conventions for C# code developed at Company Betagro. It's based on standard C# conventions and best practices, particularly those recommended by Microsoft, with some modifications to address specific needs and preferences within our organization.

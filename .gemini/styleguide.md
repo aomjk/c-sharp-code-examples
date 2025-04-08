@@ -97,8 +97,6 @@ public bool MyMethod(int param1, string param2)
 * Team-wide Settings: Use .editorconfig files checked into source control to define and enforce many formatting and code style rules consistently across different IDEs.
 ## Example
 
-C#
-
 using System;
 using System.Security.Cryptography;
 using System.Text;

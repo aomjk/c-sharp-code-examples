@@ -51,6 +51,8 @@ namespace CodeSamples.Files
             GetSpecialFolders();
 
             Finish();
+              // Comment test
+              var Testvar;
         }
     }
 }

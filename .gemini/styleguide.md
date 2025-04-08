@@ -76,25 +76,25 @@ public bool MyMethod(int param1, string param2)
 * Avoid commented-out code in the final commit. Use source control history instead.
 
 ## Logging
+* Use a standard logging framework: Company Betagro uses [Specify framework, e.g., Microsoft.Extensions.Logging with Serilog/NLog, Serilog directly].
+* Inject logger instances (e.g., ILogger<T>) via dependency injection where possible.
+* Log at appropriate levels: Trace, Debug, Information, Warning, Error, Critical.
+* Provide context: Include relevant information (e.g., IDs, method names, key parameters) in log messages using structured logging placeholders (e.g., LogInformation("Processing order {OrderId} for customer {CustomerId}", orderId, customerId);).
+* Avoid logging sensitive information like passwords or PII unless properly masked or required by specific security protocols.
 
-Use a standard logging framework: Company Betagro uses [Specify framework, e.g., Microsoft.Extensions.Logging with Serilog/NLog, Serilog directly].
-Inject logger instances (e.g., ILogger<T>) via dependency injection where possible.
-Log at appropriate levels: Trace, Debug, Information, Warning, Error, Critical.
-Provide context: Include relevant information (e.g., IDs, method names, key parameters) in log messages using structured logging placeholders (e.g., LogInformation("Processing order {OrderId} for customer {CustomerId}", orderId, customerId);).
-Avoid logging sensitive information like passwords or PII unless properly masked or required by specific security protocols.
 ## Error Handling
+* Use specific exception types derived from System.Exception. Avoid catching System.Exception or System.SystemException unless re-throwing or at the top level for logging.
+* Throw exceptions for exceptional conditions, not for normal control flow.
+* Handle exceptions gracefully: Use try...catch blocks. Catch specific exceptions you can handle meaningfully. Let others propagate up.
+* Use try...finally or preferably using statements for deterministic cleanup of resources (IDisposable objects like streams, database connections, etc.).
+* Provide informative error messages in exceptions. Include relevant context where possible.
+* Consider using the Result pattern or similar constructs for operations where failure is a common, expected outcome (instead of throwing exceptions).
 
-Use specific exception types derived from System.Exception. Avoid catching System.Exception or System.SystemException unless re-throwing or at the top level for logging.
-Throw exceptions for exceptional conditions, not for normal control flow.
-Handle exceptions gracefully: Use try...catch blocks. Catch specific exceptions you can handle meaningfully. Let others propagate up.
-Use try...finally or preferably using statements for deterministic cleanup of resources (IDisposable objects like streams, database connections, etc.).
-Provide informative error messages in exceptions. Include relevant context where possible.
-Consider using the Result pattern or similar constructs for operations where failure is a common, expected outcome (instead of throwing exceptions).
 ## Tooling
 
-Code formatter: Utilize the formatting capabilities built into Visual Studio, VS Code, or JetBrains Rider. Ensure consistent settings across the team, potentially managed via .editorconfig.
-Static Analysis / Linting: Leverage Roslyn Analyzers (included with the .NET SDK and enhanced by installing additional analyzer packages like StyleCop.Analyzers, SonarAnalyzer.CSharp, etc.). Configure rule severity via .editorconfig or ruleset files.
-Team-wide Settings: Use .editorconfig files checked into source control to define and enforce many formatting and code style rules consistently across different IDEs.
+* Code formatter: Utilize the formatting capabilities built into Visual Studio, VS Code, or JetBrains Rider. Ensure consistent settings across the team, potentially managed via .editorconfig.
+* Static Analysis / Linting: Leverage Roslyn Analyzers (included with the .NET SDK and enhanced by installing additional analyzer packages like StyleCop.Analyzers, SonarAnalyzer.CSharp, etc.). Configure rule severity via .editorconfig or ruleset files.
+* Team-wide Settings: Use .editorconfig files checked into source control to define and enforce many formatting and code style rules consistently across different IDEs.
 ## Example
 
 C#

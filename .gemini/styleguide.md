@@ -3,13 +3,13 @@ Company Betagro C# Style Guide
 Introduction
 This style guide outlines the coding conventions for C# code developed at Company Betagro. It's based on standard C# conventions and best practices, particularly those recommended by Microsoft, with some modifications to address specific needs and preferences within our organization.
 
-Key Principles
+##Key Principles
 
-Readability: Code should be easy to understand for all team members. Use clear naming and logical structure.
-Maintainability: Code should be easy to modify and extend. Follow SOLID principles and established design patterns where appropriate.
-Consistency: Adhering to a consistent style across all projects improves collaboration and reduces errors. Utilize tooling to enforce consistency.
-Performance: While readability is paramount, code should be efficient. Be mindful of performance implications, especially in critical paths.
-Deviations from Common C# Conventions (if any - explicitly mention them here)
+*Readability: Code should be easy to understand for all team members. Use clear naming and logical structure.
+*Maintainability: Code should be easy to modify and extend. Follow SOLID principles and established design patterns where appropriate.
+*Consistency: Adhering to a consistent style across all projects improves collaboration and reduces errors. Utilize tooling to enforce consistency.
+*Performance: While readability is paramount, code should be efficient. Be mindful of performance implications, especially in critical paths.
+*Deviations from Common C# Conventions (if any - explicitly mention them here)
 
 (This section is for noting any specific deviations Betagro chooses. The original Java guide only noted line length, which is less strictly defined in C# anyway)
 ## Line Length

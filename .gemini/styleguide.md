@@ -33,7 +33,7 @@ This style guide outlines the coding conventions for C# code developed at Compan
 * Acronyms: Treat acronyms like words in PascalCase and camelCase (e.g., XmlReader, htmlDocument), except for two-letter acronyms which should be uppercase (e.g., IOStream).
 
 ## XML Documentation Comments
-*Use / / / <summary>...</summary> for all public/internal/protected types and members (classes, interfaces, methods, properties, fields, enums, delegates).
+*Use ```/// <summary>...</summary>``` for all public/internal/protected types and members (classes, interfaces, methods, properties, fields, enums, delegates).
 
 ## Generics
 * Utilize generics where appropriate to improve type safety and code reusability.

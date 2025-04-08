@@ -32,32 +32,9 @@ This style guide outlines the coding conventions for C# code developed at Compan
 * Namespaces: Use PascalCase, typically reflecting the assembly structure: CompanyBetagro.Utilities, CompanyBetagro.Data.Repositories. Avoid underscores.
 * Acronyms: Treat acronyms like words in PascalCase and camelCase (e.g., XmlReader, htmlDocument), except for two-letter acronyms which should be uppercase (e.g., IOStream).
 
-C#
+## XML Documentation Comments
+*Use \/\/\/ <summary>...</summary> for all public/internal/protected types and members (classes, interfaces, methods, properties, fields, enums, delegates).
 
-/// <summary>
-/// Single-line summary describing the method's purpose.
-/// </summary>
-/// <param name="param1">Description of the first parameter.</param>
-/// <param name="param2">Description of the second parameter.</param>
-/// <returns>Description of the return value. E.g., True for success, False otherwise.</returns>
-/// <exception cref="ArgumentNullException">Thrown when <paramref name="param2"/> is null.</exception>
-/// <exception cref="ArgumentException">Thrown when <paramref name="param2"/> is invalid.</exception>
-/// <remarks>
-/// More detailed description or usage notes, if necessary.
-/// </remarks>
-public bool MyMethod(int param1, string param2)
-{
-    if (param2 == null)
-    {
-        throw new ArgumentNullException(nameof(param2));
-    }
-    if (string.IsNullOrWhiteSpace(param2))
-    {
-        throw new ArgumentException("Parameter cannot be empty.", nameof(param2));
-    }
-    // method body here
-    return true; // Example return
-}
 ## Generics
 * Utilize generics where appropriate to improve type safety and code reusability.
 * Use descriptive names for type parameters (e.g., TKey, TValue, TEntity) or a single T if the context is obvious.

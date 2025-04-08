@@ -32,12 +32,6 @@ This style guide outlines the coding conventions for C# code developed at Compan
 * Namespaces: Use PascalCase, typically reflecting the assembly structure: CompanyBetagro.Utilities, CompanyBetagro.Data.Repositories. Avoid underscores.
 * Acronyms: Treat acronyms like words in PascalCase and camelCase (e.g., XmlReader, htmlDocument), except for two-letter acronyms which should be uppercase (e.g., IOStream).
 
-## XML Documentation Comments
-* Use /// <summary>..  .</summary> for all public/internal/protected types and members (classes, interfaces, methods, properties, fields, enums, delegates).
-* First line of <summary>: Concise summary of the element's purpose, ending with a period.
-* For complex methods/members: Include detailed descriptions in the <summary> or use <remarks>. Document parameters (<param name="name">), return values (<returns>), exceptions (<exception cref="Type">), and type parameters (<typeparam name="name">).
-* Follow standard XML documentation comment conventions.
-
 C#
 
 /// <summary>

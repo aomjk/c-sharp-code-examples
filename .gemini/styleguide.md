@@ -34,7 +34,7 @@ This style guide outlines the coding conventions for C# code developed at Compan
 
 ## XML Documentation Comments
 * Use ```/// <summary>...</summary>``` for all public/internal/protected types and members (classes, interfaces, methods, properties, fields, enums, delegates).
-* First line of <summary>: Concise summary of the element's purpose, ending with a period.
+* First line of ```<summary>:``` Concise summary of the element's purpose, ending with a period.
 * For complex methods/members: Include detailed descriptions in the <summary> or use <remarks>. Document parameters (<param name="name">), return values (<returns>), exceptions (<exception cref="Type">), and type parameters (<typeparam name="name">).
 
 ## Generics

@@ -65,16 +65,16 @@ public bool MyMethod(int param1, string param2)
     return true; // Example return
 }
 ## Generics
+* Utilize generics where appropriate to improve type safety and code reusability.
+* Use descriptive names for type parameters (e.g., TKey, TValue, TEntity) or a single T if the context is obvious.
 
-Utilize generics where appropriate to improve type safety and code reusability.
-Use descriptive names for type parameters (e.g., TKey, TValue, TEntity) or a single T if the context is obvious.
 ## Comments
+* Write clear and concise comments using // for single-line or end-of-line comments. Use /* ... */ for temporarily commenting out blocks of code (avoid committing this).
+* Use /// XML comments for documenting APIs (as described above).
+* Explain the why behind non-obvious code, not just the what.
+* Comment sparingly: Well-named variables, methods, and classes should make the code largely self-documenting.
+* Avoid commented-out code in the final commit. Use source control history instead.
 
-Write clear and concise comments using // for single-line or end-of-line comments. Use /* ... */ for temporarily commenting out blocks of code (avoid committing this).
-Use /// XML comments for documenting APIs (as described above).
-Explain the why behind non-obvious code, not just the what.
-Comment sparingly: Well-named variables, methods, and classes should make the code largely self-documenting.
-Avoid commented-out code in the final commit. Use source control history instead.
 ## Logging
 
 Use a standard logging framework: Company Betagro uses [Specify framework, e.g., Microsoft.Extensions.Logging with Serilog/NLog, Serilog directly].

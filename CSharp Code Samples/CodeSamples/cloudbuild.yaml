@@ -1,0 +1,30 @@
+steps:
+  # Download and unzip the SonarScanner
+  - name: 'gcr.io/cloud-builders/wget'
+    args:
+      - 'https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.7.0.2747-linux.zip'
+  - name: 'alpine'
+    entrypoint: 'sh'
+    args:
+      - '-c'
+      - 'unzip sonar-scanner-cli-4.7.0.2747-linux.zip'
+
+  # Run the SonarCloud analysis
+  - name: 'gcr.io/cloud-builders/java'
+    entrypoint: 'sh'
+    args:
+      - '-c'
+      - |
+        ./sonar-scanner-4.7.0.2747-linux/bin/sonar-scanner \
+          -Dsonar.host.url=https://sonarcloud.io \
+          -Dsonar.organization=YOUR_SONAR_ORGANIZATION \
+          -Dsonar.projectKey=YOUR_SONAR_PROJECT_KEY \
+          -Dsonar.branch.name=$BRANCH_NAME \
+          -Dsonar.login=$$SONAR_TOKEN
+    secretEnv: ['SONAR_TOKEN']
+
+# Make the SonarCloud token available to the build
+availableSecrets:
+  secretManager:
+    - versionName: projects/$PROJECT_ID/secrets/SONAR_TOKEN/versions/latest
+      env: 'SONAR_TOKEN'
